@@ -8,12 +8,12 @@
         nicht an den Bits sondern an Bitfolgen arbeiten. Beim bitweisen
         Verschieben werden Bits nach links oder rechts verschoben. Da sich die
         Länge der Bitfolge in der Regel nicht verändert, werden die Bits am Ende
-        &quot;herausgeschoben&quot;
+        &quot;herausgeschoben&quot;.
     </p>
 </section>
 
 <section>
-    <h2>Representation</h2>
+    <h2>Repräsentation</h2>
     <p class="content">
         In der Programmiersprache C werden Shiftings durch zwei aufeinander
         folgende Größer- bzw. Kleiner-als-Zeichen dargestellt:
@@ -48,14 +48,14 @@
         Bei der logischen Verschiebung wird immer eine <code>0</code>
         eingeschoben, ohne Berücksichtigung der Schieberichtung und des
         Vorzeichens. In der Regel wird die logische Verschiebung immer
-        bei vorzeichenlosen Zahlen angewand.
+        bei vorzeichenlosen Zahlen angewandt.
     </p>
     <p class="content">
         Bei der arithmetischen Verschiebung hingegen wird das Vorzeichen
         kopiert und eingeschoben, weshalb diese in der Regel bei
         vorzeichenbehafteten Zahlen angewandt wird. Leider ist dieses
-        Verhalten nur teilweise Dokumentiert, weshalb je nach Compiler
-        nachgeschlagenw erden sollte.
+        Verhalten nur teilweise dokumentiert, weshalb je nach Compiler
+        nachgeschlagen werden sollte.
     </p>
     
     <pre>00101010 (42) &gt;&gt; 1 = 00010101 (21)

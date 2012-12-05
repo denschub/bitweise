@@ -5,11 +5,11 @@
 <section>
     <p class="content">
         Im Binärsystem gibt es nur die Ziffern <code>0</code> und
-        <code>1</code>, aber keinerlei Vorzeichen. Negative zahlen lassen sich
+        <code>1</code>, aber keinerlei Vorzeichen. Negative Zahlen lassen sich
         so also eigentlich nicht darstellen.
     </p>
     <p class="content">
-        In der Mathematik werden negative Zahlen durch ein voranstellen eines
+        In der Mathematik werden negative Zahlen durch ein Voranstellen eines
         Strichs, <code>-</code>, dargestellt. Im Binärsystem werden negative
         Zahlen durch das Setzen eines bestimmten Bits dargestellt, ähnlich
         wie dem Setzen eines Vorzeichens. Es gibt mehrere Möglichkeiten,
@@ -45,7 +45,7 @@
     </p>
     
     <p class="content">
-        Dieses Verhalten ist nicht nur logisch Falsch, sondern es bereitet auch Probleme
+        Dieses Verhalten ist nicht nur logisch falsch, sondern es bereitet auch Probleme
         beim Addieren und Subtrahieren über die &quot;0-Grenze&quot; hinweg, weshalb
         man auf die Einerkomplement-Darstellung verzichtet und die
         Zweierkomplement-Darstellung vorzieht. Der mögliche Zahlenraum in einem 8-Bit
@@ -57,7 +57,7 @@
     <h2>Zweierkomplement</h2>
     
     <p class="content">
-        Wie auch beim Einerkomplement sind auch die Zweierkomplement-Zahlen
+        Wie auch beim Einerkomplement sind die Zweierkomplement-Zahlen
         schnell am <a href="/msb_lsb">MSB</a> erkennbar. Bei einer positiven Zahl
         ist das MSB immer <code>0</code>, bei einer negativen Zahl <code>1</code>.
         Im Gegensatz zum Einerkomplement gibt es im Zweierkomplement keine negative
@@ -73,20 +73,20 @@
     
     <ol class="content">
         <li>Beginne von rechts, suche die erste <code>1</code></li>
-        <li>Invertiere alle bits links davon</li>
+        <li>Invertiere alle Bits links davon</li>
     </ol>
     
     <p class="content">
         Nehmen wir als Beispiel also wieder die <code>42</code>,
         <code>00101010</code> in der binären Schreibweise. Die erste
         <code>1</code> steht an zweiter Stelle, danach werden alle Bits
-        inveriert. Die <code>-42</code> entspricht dann also der
+        invertiert. Die <code>-42</code> entspricht dann also der
         <code>11010110</code>.
     </p>
     
     <p class="content">
-        Neben dem Einer- und Zweierkomplement gibt es noch weitere Möglichekiten,
+        Neben dem Einer- und Zweierkomplement gibt es noch weitere Möglichkeiten,
         negative Zahlen darzustellen. Die Zweierkomplement-Methode ist allerdings
-        die am weitesten Verbreitete.
+        die am weitesten verbreitete.
     </p>
 </section>
