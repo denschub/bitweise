@@ -11,9 +11,9 @@
     <p class="content">
         In der Mathematik werden negative Zahlen durch ein Voranstellen eines
         Strichs, <code>-</code>, dargestellt. Im Binärsystem werden negative
-        Zahlen durch das Setzen eines bestimmten Bits dargestellt, ähnlich
+        Zahlen oft durch das Setzen eines bestimmten Bits gekennzeichnet, ähnlich
         wie dem Setzen eines Vorzeichens. Es gibt mehrere Möglichkeiten,
-        negative Zahlen darzustellen, zwei davon werden hier gezeigt.
+        negative Zahlen zu kodieren; zwei davon werden hier gezeigt.
     </p>
 </section>
 
@@ -39,7 +39,7 @@
         Denkt man über das Invertieren aller Bits nach, fällt schnell auf, dass
         es in diesem Fall für die Zahl <code>0</code> eigentlich auch eine
         negative Variante gibt, <code>-0</code>. Die <code>0</code> in Binärform
-        entspricht <code>00000000</code>, invertiert man alle Bits erhält
+        entspricht <code>00000000</code>. Invertiert man alle Bits erhält
         man <code>11111111</code>, was theoretisch einer <code>-0</code> entsprechen
         würde.
     </p>
@@ -48,7 +48,7 @@
         Dieses Verhalten ist nicht nur logisch falsch, sondern es bereitet auch Probleme
         beim Addieren und Subtrahieren über die &quot;0-Grenze&quot; hinweg, weshalb
         man auf die Einerkomplement-Darstellung verzichtet und die
-        Zweierkomplement-Darstellung vorzieht. Der mögliche Zahlenraum in einem 8-Bit
+        Zweierkomplement-Darstellung vorzieht. Der mögliche Zahlenraum in einem 8-bit
         vorzeichenbehafteten Integer reicht von <code>-127</code> bis <code>127</code>.
     </p>
 </section>
@@ -57,11 +57,11 @@
     <h2>Zweierkomplement</h2>
     
     <p class="content">
-        Wie auch beim Einerkomplement sind die Zweierkomplement-Zahlen
+        Wie auch beim Einerkomplement sind die durch das Zweierkomplement kodierten Zahlen
         schnell am <a href="/msb_lsb">MSB</a> erkennbar. Bei einer positiven Zahl
         ist das MSB immer <code>0</code>, bei einer negativen Zahl <code>1</code>.
         Im Gegensatz zum Einerkomplement gibt es im Zweierkomplement keine negative
-        <code>0</code>, weshalb der mögliche Zahlenraum in einem 8-Bit
+        <code>0</code>, weshalb der mögliche Zahlenraum in einem 8-bit
         vorzeichenbehafteten Integer von <code>-128</code> bis <code>127</code> reicht.
     </p>
     
@@ -86,7 +86,7 @@
     
     <p class="content">
         Neben dem Einer- und Zweierkomplement gibt es noch weitere Möglichkeiten,
-        negative Zahlen darzustellen. Die Zweierkomplement-Methode ist allerdings
+        negative Zahlen darzustellen. Das Zweierkomplement ist allerdings
         die am weitesten verbreitete.
     </p>
 </section>
