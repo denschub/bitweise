@@ -1,0 +1,169 @@
+---
+---
+
+@font-face {
+  font-family: 'VT323';
+  src: url('../fonts/vt323.eot');
+  src: url('../fonts/vt323.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/vt323.woff') format('woff'),
+       url('../fonts/vt323.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  height: 100%;
+  min-width: 830px;
+  overflow-y: hidden;
+}
+
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+  background-color: #111;
+}
+
+nav, #container {
+  box-sizing: border-box;
+  float: left;
+  height: 100%;
+  overflow: auto;
+}
+
+nav {
+  background-color: #333;
+  padding: 0 0 0 20px;
+  width: 20%;
+
+  ul {
+    margin: 0 0 30px 0;
+    padding: 0 0 0 5px;
+
+    li {
+      &:before {
+        color: #aaa;
+        content: "-";
+        margin-right: 5px;
+      }
+
+      a {
+        color: #fff;
+        font-size: 0.8em;
+
+        &:hover, &:focus, &:active {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  h2 {
+    color: #fff;
+    margin: 20px 0 10px 0;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+#container {
+  width: 80%;
+  padding: 0 25px 0 55px;
+  background-color: #fff;
+}
+
+h1, h2 {
+  font-family: 'VT323';
+  font-weight: normal;
+
+  &#title {
+    text-align: center;
+  }
+}
+
+  h1, header h2 {
+    font-size: 4em;
+    margin: 0;
+    padding: 42px 0;
+  }
+
+  header h2 {
+    font-size: 2.5em;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+  }
+
+section h1, section h2, header h2 {
+  border-bottom: 1px solid #aaa;
+}
+
+  section h2, header h2 {
+    line-height: 1.5em;
+  }
+
+#errorpage {
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+
+  #error {
+    text-align: center;
+    padding-bottom: 0;
+  }
+
+  #binary {
+    font-size: 1.4em;
+    padding-top: 15px;
+    color: #ccc;
+    text-align: center;
+    border-bottom: none;
+  }
+}
+
+#errortext p.content {
+  text-align: center;
+}
+
+.content, pre, code {
+  font-size: 0.8em;
+  line-height: 1.5em;
+  margin: 10px 0 5px;
+}
+
+  pre, code {
+    line-height: 1.1em;
+    color: #333;
+    margin: 10px 15px 5px;
+  }
+
+  code {
+    margin: 0;
+    font-size: 1em;
+  }
+
+.content a {
+  color: #000;
+
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+  }
+}
+
+footer {
+  margin-top: 20px;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  text-align: center;
+
+  p.content a {
+    font-size: 0.9em;
+    color: #666;
+    text-decoration: none;
+
+    &:hover, &:focus, &:active {
+      text-decoration: none;
+    }
+  }
+}
