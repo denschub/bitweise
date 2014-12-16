@@ -1,0 +1,11 @@
+name: Bitwei.se
+exclude:
+  - .*
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+sass:
+  sass_dir: css
+  style: nested
+  deploy_style: nested
