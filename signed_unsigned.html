@@ -1,92 +1,95 @@
+---
+layout: default
+---
 <header>
-    <h2>Signed &amp; Unsigned</h2>
+  <h2>Signed &amp; Unsigned</h2>
 </header>
 
 <section>
-    <p class="content">
-        Im Binärsystem gibt es nur die Ziffern <code>0</code> und
-        <code>1</code>, aber keinerlei Vorzeichen. Negative Zahlen lassen sich
-        so also eigentlich nicht darstellen.
-    </p>
-    <p class="content">
-        In der Mathematik werden negative Zahlen durch ein Voranstellen eines
-        Strichs, <code>-</code>, dargestellt. Im Binärsystem werden negative
-        Zahlen oft durch das Setzen eines bestimmten Bits gekennzeichnet, ähnlich
-        wie dem Setzen eines Vorzeichens. Es gibt mehrere Möglichkeiten,
-        negative Zahlen zu kodieren; zwei davon werden hier gezeigt.
-    </p>
+  <p class="content">
+    Im Binärsystem gibt es nur die Ziffern <code>0</code> und
+    <code>1</code>, aber keinerlei Vorzeichen. Negative Zahlen lassen sich
+    so also eigentlich nicht darstellen.
+  </p>
+  <p class="content">
+    In der Mathematik werden negative Zahlen durch ein Voranstellen eines
+    Strichs, <code>-</code>, dargestellt. Im Binärsystem werden negative
+    Zahlen oft durch das Setzen eines bestimmten Bits gekennzeichnet, ähnlich
+    wie dem Setzen eines Vorzeichens. Es gibt mehrere Möglichkeiten,
+    negative Zahlen zu kodieren; zwei davon werden hier gezeigt.
+  </p>
 </section>
 
 <section>
-    <h2>Einerkomplement</h2>
-    
-    <p class="content">
-        Beim Einerkomplement werden alle Bits der Zahl
-        <a href="/not">negiert</a>, um die negative Version der Zahl
-        darzustellen. Bei einer positiven Zahl ist das
-        <a href="/msb_lsb">MSB</a> immer <code>0</code>, bei einer negativen
-        Zahl <code>1</code>. Somit ist es recht schnell ersichtlich, ob die
-        Zahl positiv oder negativ ist.
-    </p>
-    
-    <p class="content">
-        Gehen wir von der Zahl <code>42</code> aus, <code>00101010</code>. Wenn
-        wir nun alle Bits invertieren, erhalten wir <code>11010101</code>, was
-        in der Tat einer <code>-42</code> in einem 8-bit-Integer entspricht.
-    </p>
-    
-    <p class="content">
-        Denkt man über das Invertieren aller Bits nach, fällt schnell auf, dass
-        es in diesem Fall für die Zahl <code>0</code> eigentlich auch eine
-        negative Variante gibt, <code>-0</code>. Die <code>0</code> in Binärform
-        entspricht <code>00000000</code>. Invertiert man alle Bits erhält
-        man <code>11111111</code>, was theoretisch einer <code>-0</code> entsprechen
-        würde.
-    </p>
-    
-    <p class="content">
-        Dieses Verhalten ist nicht nur logisch falsch, sondern es bereitet auch Probleme
-        beim Addieren und Subtrahieren über die &quot;0-Grenze&quot; hinweg, weshalb
-        man auf die Einerkomplement-Darstellung verzichtet und die
-        Zweierkomplement-Darstellung vorzieht. Der mögliche Zahlenraum in einem 8-bit
-        vorzeichenbehafteten Integer reicht von <code>-127</code> bis <code>127</code>.
-    </p>
+  <h2>Einerkomplement</h2>
+
+  <p class="content">
+    Beim Einerkomplement werden alle Bits der Zahl
+    <a href="/not.html">negiert</a>, um die negative Version der Zahl
+    darzustellen. Bei einer positiven Zahl ist das
+    <a href="/msb_lsb.html">MSB</a> immer <code>0</code>, bei einer negativen
+    Zahl <code>1</code>. Somit ist es recht schnell ersichtlich, ob die
+    Zahl positiv oder negativ ist.
+  </p>
+
+  <p class="content">
+    Gehen wir von der Zahl <code>42</code> aus, <code>00101010</code>. Wenn
+    wir nun alle Bits invertieren, erhalten wir <code>11010101</code>, was
+    in der Tat einer <code>-42</code> in einem 8-bit-Integer entspricht.
+  </p>
+
+  <p class="content">
+    Denkt man über das Invertieren aller Bits nach, fällt schnell auf, dass
+    es in diesem Fall für die Zahl <code>0</code> eigentlich auch eine
+    negative Variante gibt, <code>-0</code>. Die <code>0</code> in Binärform
+    entspricht <code>00000000</code>. Invertiert man alle Bits erhält
+    man <code>11111111</code>, was theoretisch einer <code>-0</code> entsprechen
+    würde.
+  </p>
+
+  <p class="content">
+    Dieses Verhalten ist nicht nur logisch falsch, sondern es bereitet auch Probleme
+    beim Addieren und Subtrahieren über die &quot;0-Grenze&quot; hinweg, weshalb
+    man auf die Einerkomplement-Darstellung verzichtet und die
+    Zweierkomplement-Darstellung vorzieht. Der mögliche Zahlenraum in einem 8-bit
+    vorzeichenbehafteten Integer reicht von <code>-127</code> bis <code>127</code>.
+  </p>
 </section>
 
 <section>
-    <h2>Zweierkomplement</h2>
-    
-    <p class="content">
-        Wie auch beim Einerkomplement sind die durch das Zweierkomplement kodierten Zahlen
-        schnell am <a href="/msb_lsb">MSB</a> erkennbar. Bei einer positiven Zahl
-        ist das MSB immer <code>0</code>, bei einer negativen Zahl <code>1</code>.
-        Im Gegensatz zum Einerkomplement gibt es im Zweierkomplement keine negative
-        <code>0</code>, weshalb der mögliche Zahlenraum in einem 8-bit
-        vorzeichenbehafteten Integer von <code>-128</code> bis <code>127</code> reicht.
-    </p>
-    
-    <p class="content">
-        Das Bilden des Zweierkomplements ist leider nicht so einfach wie beim
-        Einerkomplement. Beim Umwandeln werden zuerst alle Bits invertiert
-        und dann <code>1</code> addiert. Eine leichtere Methode:
-    </p>
-    
-    <ol class="content">
-        <li>Beginne von rechts, suche die erste <code>1</code></li>
-        <li>Invertiere alle Bits links davon</li>
-    </ol>
-    
-    <p class="content">
-        Nehmen wir als Beispiel also wieder die <code>42</code>,
-        <code>00101010</code> in der binären Schreibweise. Die erste
-        <code>1</code> steht an zweiter Stelle, danach werden alle Bits
-        invertiert. Die <code>-42</code> entspricht dann also der
-        <code>11010110</code>.
-    </p>
-    
-    <p class="content">
-        Neben dem Einer- und Zweierkomplement gibt es noch weitere Möglichkeiten,
-        negative Zahlen darzustellen. Das Zweierkomplement ist allerdings
-        die am weitesten verbreitete.
-    </p>
+  <h2>Zweierkomplement</h2>
+
+  <p class="content">
+    Wie auch beim Einerkomplement sind die durch das Zweierkomplement kodierten Zahlen
+    schnell am <a href="/msb_lsb.html">MSB</a> erkennbar. Bei einer positiven Zahl
+    ist das MSB immer <code>0</code>, bei einer negativen Zahl <code>1</code>.
+    Im Gegensatz zum Einerkomplement gibt es im Zweierkomplement keine negative
+    <code>0</code>, weshalb der mögliche Zahlenraum in einem 8-bit
+    vorzeichenbehafteten Integer von <code>-128</code> bis <code>127</code> reicht.
+  </p>
+
+  <p class="content">
+    Das Bilden des Zweierkomplements ist leider nicht so einfach wie beim
+    Einerkomplement. Beim Umwandeln werden zuerst alle Bits invertiert
+    und dann <code>1</code> addiert. Eine leichtere Methode:
+  </p>
+
+  <ol class="content">
+    <li>Beginne von rechts, suche die erste <code>1</code></li>
+    <li>Invertiere alle Bits links davon</li>
+  </ol>
+
+  <p class="content">
+    Nehmen wir als Beispiel also wieder die <code>42</code>,
+    <code>00101010</code> in der binären Schreibweise. Die erste
+    <code>1</code> steht an zweiter Stelle, danach werden alle Bits
+    invertiert. Die <code>-42</code> entspricht dann also der
+    <code>11010110</code>.
+  </p>
+
+  <p class="content">
+    Neben dem Einer- und Zweierkomplement gibt es noch weitere Möglichkeiten,
+    negative Zahlen darzustellen. Das Zweierkomplement ist allerdings
+    die am weitesten verbreitete.
+  </p>
 </section>

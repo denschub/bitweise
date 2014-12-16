@@ -6,6 +6,6 @@ exclude:
   - LICENSE
   - README.md
 sass:
-  sass_dir: css
+  sass_dir: styles
   style: nested
   deploy_style: nested

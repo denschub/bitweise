@@ -1,63 +1,66 @@
+---
+layout: default
+---
 <header>
-    <h2>Shifting</h2>
+  <h2>Shifting</h2>
 </header>
 
 <section>
-    <p class="content">
-        Bitweise Verschiebungen sind eigentlich gar keine Bitoperationen, da sie
-        nicht an Bits sondern mit Bitfolgen arbeiten. Beim bitweisen
-        Verschieben werden Bits nach links oder rechts verschoben. Da sich die
-        Länge der Bitfolge in der Regel nicht verändert, werden die Bits am Ende
-        &quot;herausgeschoben&quot;.
-    </p>
+  <p class="content">
+    Bitweise Verschiebungen sind eigentlich gar keine Bitoperationen, da sie
+    nicht an Bits sondern mit Bitfolgen arbeiten. Beim bitweisen
+    Verschieben werden Bits nach links oder rechts verschoben. Da sich die
+    Länge der Bitfolge in der Regel nicht verändert, werden die Bits am Ende
+    &quot;herausgeschoben&quot;.
+  </p>
 </section>
 
 <section>
-    <h2>Repräsentation</h2>
-    <p class="content">
+  <h2>Repräsentation</h2>
+  <p class="content">
     In der Programmiersprache C werden <i>Shiftings</i> durch zwei aufeinander
-        folgende Größer- bzw. Kleiner-als-Zeichen dargestellt:
-    </p>
-    
-    <pre>|-------------|----|
+    folgende Größer- bzw. Kleiner-als-Zeichen dargestellt:
+  </p>
+
+  <pre>|-------------|----|
 | left shift  | &lt;&lt; |
 | right shift | &gt;&gt; |
 |-------------|----|</pre>
 </section>
 
 <section>
-    <h2>Left shift</h2>
-    <p class="content">
-        Beim Verschieben nach links wird die Bitfolge jeweils um eine Stelle
-        nach links verschoben. Die entstehende Lücke wird mit einer
-        <code>0</code> aufgefüllt.
-    </p>
-    
-    <pre>00101010 (42) &lt;&lt; 1 = 01010100 (84)</pre>
+  <h2>Left shift</h2>
+  <p class="content">
+    Beim Verschieben nach links wird die Bitfolge jeweils um eine Stelle
+    nach links verschoben. Die entstehende Lücke wird mit einer
+    <code>0</code> aufgefüllt.
+  </p>
+
+  <pre>00101010 (42) &lt;&lt; 1 = 01010100 (84)</pre>
 </section>
 
 <section>
-    <h2>Right shift</h2>
-    <p class="content">
-        Beim Verschieben nach rechts gibt es einen Sonderfall: Die Behandlung
-        von <a href="/signed_unsigned">vorzeichenbehafteten Zahlen</a>. Hier
-        muss man zwischen der <i>arithmetischen Verschiebung</i> und der
-        <i>logischen Verschiebung</i> unterscheiden.
-    </p>
-    <p class="content">
-        Bei der logischen Verschiebung wird immer eine <code>0</code>
-        eingeschoben, ohne Berücksichtigung der Schieberichtung und des
-        Vorzeichens. In der Regel wird die logische Verschiebung immer
-        bei vorzeichenlosen Zahlen angewandt.
-    </p>
-    <p class="content">
-        Bei der arithmetischen Verschiebung hingegen wird das Vorzeichen
-        kopiert und eingeschoben, weshalb diese in der Regel bei
-        vorzeichenbehafteten Zahlen angewandt wird. Leider ist dieses
-        Verhalten nur teilweise dokumentiert, weshalb je nach Compiler
-        nachgeschlagen werden sollte.
-    </p>
-    
-    <pre>00101010 (42) &gt;&gt; 1 = 00010101 (21)
+  <h2>Right shift</h2>
+  <p class="content">
+    Beim Verschieben nach rechts gibt es einen Sonderfall: Die Behandlung
+    von <a href="/signed_unsigned.html">vorzeichenbehafteten Zahlen</a>. Hier
+    muss man zwischen der <i>arithmetischen Verschiebung</i> und der
+    <i>logischen Verschiebung</i> unterscheiden.
+  </p>
+  <p class="content">
+    Bei der logischen Verschiebung wird immer eine <code>0</code>
+    eingeschoben, ohne Berücksichtigung der Schieberichtung und des
+    Vorzeichens. In der Regel wird die logische Verschiebung immer
+    bei vorzeichenlosen Zahlen angewandt.
+  </p>
+  <p class="content">
+    Bei der arithmetischen Verschiebung hingegen wird das Vorzeichen
+    kopiert und eingeschoben, weshalb diese in der Regel bei
+    vorzeichenbehafteten Zahlen angewandt wird. Leider ist dieses
+    Verhalten nur teilweise dokumentiert, weshalb je nach Compiler
+    nachgeschlagen werden sollte.
+  </p>
+
+  <pre>00101010 (42) &gt;&gt; 1 = 00010101 (21)
 11010110 (-42) &gt;&gt; 1 = 11101011 (-21)</pre>
 </section>
