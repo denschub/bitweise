@@ -1,0 +1,18 @@
+image: ruby:2.5-alpine
+
+variables:
+  JEKYLL_ENV: production
+
+before_script:
+  - apk add alpine-sdk
+  - bundle install --full-index
+
+pages:
+  stage: deploy
+  script:
+    - bundle exec jekyll build -d public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
